@@ -1,0 +1,343 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FAZECLAN</title>
+
+  <script src="libs/gsap/TweenMax.min.js"></script>
+  <script src="libs/gsap/utils/Draggable.min.js"></script>
+
+  <script src="libs/howler.min.js"></script>
+
+  <script src="libs/three.min.js"></script>
+  <script src="libs/three/GLTFLoader.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+  <div id="globalWrapper" class="rct opacity0">
+
+    <div id="wrapper" class="rct">
+      <div id="mainCont" class="rct">
+        <div id="bgImg" class="rct">
+          <div id="tvCont">
+            <div id="tvVideo" class="">
+              <video id="tvVideoSource" width="124" height="117" loop="true" style="opacity: 0">
+                <source src="assets/tv_over.mp4" type="video/mp4" autostart="false">
+                <!-- <source src="movie.ogg" type="video/ogg"> -->
+              </video>
+            </div>
+            <div id="tvOver" class="tvSize"></div>
+          </div>
+        </div>
+        <div id="threeCont" class="rct"></div>
+        <div id="dragEl" class="rct"></div>
+      </div>
+
+
+      <div id="shopCont">
+        <div id="shopBtn">
+          <div class="text">SHOP</div>
+          <div class="arrow"></div>
+        </div>
+        <div id="menuCont" class="noDisplay">
+          <div class="menu_bg_top"></div>
+          <div class="menu_bg_middle">
+
+            <div id="menuList">
+              <div class="list" alt="c_all">All items</div>
+              <div class="list" alt="c_jerseys">jerseys</div>
+              <div class="list" alt="c_hoodies">hoodies</div>
+              <div class="list" alt="c_shirts">shirts</div>
+              <div class="list" alt="c_champion">champion</div>
+              <div class="list" alt="c_digital">digital dissonance</div>
+              <div class="list" alt="c_faceworldwide">#faceworldwide</div>
+            </div>
+
+            <div id="productList" class="noDisplay">
+              <div id="back_btn">BACK</div>
+              
+              <!-- category classes: c_all c_jerseys c_hoodies c_shirts c_champion c_digital c_faceworldwide  -->
+              <div id="productListCont" class="">
+                <div id="p_jerseys_01" class="product c_jerseys"><div class="img"></div></div>
+
+                <div id="p_shirt_01" class="product c_shirts"><div class="img"></div></div>
+                <div id="p_shirt_02" class="product c_shirts"><div class="img"></div></div>
+                <div id="p_shirt_03" class="product c_shirts"><div class="img"></div></div>
+                <div id="p_shirt_04" class="product c_shirts"><div class="img"></div></div>
+
+                <div id="p_hoodies_01" class="product c_hoodies"><div class="img"></div></div>
+                <div id="p_hoodies_02" class="product c_hoodies"><div class="img"></div></div>
+                <div id="p_hoodies_03" class="product c_hoodies"><div class="img"></div></div>
+
+                <div id="p_champion_01" class="product c_champion"><div class="img"></div></div>
+                <div id="p_champion_02" class="product c_champion"><div class="img"></div></div>
+
+                <div id="p_digital_01" class="product c_digital"><div class="img"></div></div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="menu_bg_bottom"></div>
+        </div>
+      </div>
+
+      <div id="cartCont">
+        <div id="cartBtn">
+          <div class="icon"></div>
+          <div class="circle">
+            <div class="text">1</div>
+          </div>
+        </div>
+
+        <div id="cartBox" class="noDisplay">
+          <div class="product_header">
+            <div class="name">PRODUCT</div>
+            <div id="cartCloseBtn" class="closeBtn"></div>
+          </div>
+
+          <div class="box">
+            <div class="top"></div>
+            <div class="middle">
+              <div id="cartProducts">
+
+                <div id="cart_pr_01" class="cart_product">
+                  <div class="photoFrame"><div class="photo center"></div></div>
+                  <div class="infoBox">
+                    <div class="name">Faze clan digital eyes</div>
+                    <div class="color">Tee black</div>
+                    <div class="tags">
+                      <div class="tag">b</div>
+                      <div class="tag">m</div>
+                      <div class="tag">1</div>
+                    </div>
+                    <div class="price"><span class="dolar_sign">$</span>38</div>
+                  </div>
+                  <div class="deleteBtn"></div>
+                </div>
+
+                <div id="cart_pr_02" class="cart_product">
+                  <div class="photoFrame"><div class="photo center"></div></div>
+                  <div class="infoBox">
+                    <div class="name">Faze clan digital eyes</div>
+                    <div class="color">Tee black</div>
+                    <div class="tags">
+                      <div class="tag">b</div>
+                      <div class="tag">m</div>
+                      <div class="tag">1</div>
+                    </div>
+                    <div class="price"><span class="dolar_sign">$</span>38</div>
+                  </div>
+                  <div class="deleteBtn"></div>
+                </div>
+
+                <div id="cart_pr_03" class="cart_product">
+                  <div class="photoFrame"><div class="photo center"></div></div>
+                  <div class="infoBox">
+                    <div class="name">Faze clan digital eyes</div>
+                    <div class="color">Tee black</div>
+                    <div class="tags">
+                      <div class="tag">b</div>
+                      <div class="tag">m</div>
+                      <div class="tag">1</div>
+                    </div>
+                    <div class="price"><span class="dolar_sign">$</span>38</div>
+                  </div>
+                  <div class="deleteBtn"></div>
+                </div>
+
+                <div id="cart_pr_04" class="cart_product">
+                  <div class="photoFrame"><div class="photo center"></div></div>
+                  <div class="infoBox">
+                    <div class="name">Faze clan digital eyes</div>
+                    <div class="color">Tee black</div>
+                    <div class="tags">
+                      <div class="tag">b</div>
+                      <div class="tag">m</div>
+                      <div class="tag">1</div>
+                    </div>
+                    <div class="price"><span class="dolar_sign">$</span>38</div>
+                  </div>
+                  <div class="deleteBtn"></div>
+                </div>
+
+              </div>
+
+
+              <div id="cartBottom">
+                <div id="subtotal">SUBTOTAL: <span class="dolar_sign">$</span>38</div>
+                <div id="cartProceedBtn" class="center_hor">PROCEED TO CHECKOUT</div>
+              </div>
+
+            </div>
+            <div class="bottom"></div>
+
+          </div>
+        </div>
+
+        <div id="productBox" class="noDisplay">
+          <div class="product_header">
+            <div class="name">PRODUCT</div>
+            <div id="productCloseBtn" class="closeBtn"></div>
+          </div>
+
+          <div class="box">
+            <div class="menu_bg_top"></div>
+            <div class="menu_bg_middle">
+              <div id="product_photo_big" class="center_hor">
+                <div class="big_photo center"></div>
+              </div>
+              <div id="product_slider" class="">
+                <div class="left"></div>
+                <div class="middle">
+                  <div id="small_photo_01" class="small_photo"></div>
+                  <div id="small_photo_02"  class="small_photo"></div>
+                </div>
+                <div class="right"></div>
+              </div>
+              <div id="product_description">
+                <div class="name">Faze clan digital eyes</div>
+                <div class="color">Tee black</div>
+                <div class="price"><span class="dolar_sign">$</span>38</div>
+              </div>
+
+              <div id="product_size_tags">
+                <div class="size_tag">s</div>
+                <div class="size_tag">m</div>
+                <div class="size_tag">l</div>
+                <div class="size_tag">xl</div>
+                <div class="size_tag">xxl</div>
+              </div>
+
+              <div id="productBottom">
+                <div id="addToCartBtn" class="center_hor">ADD TO CART</div>
+              </div>
+
+              <div id="product_discplaimer">
+                <div class="text">FaZe Clan Digital Eyes Tee  Black.</div>
+                <div class="text">"Digital Dissonance" collection - Designed by Young Corey of Circulate in LA. All pieces are extremely limited and produced locally in Los Angeles.</div>
+                <div class="text">100% Cotton.<br />6.0 oz.<br />Screen print on front.<br />True to size standard fit.</div>
+                <div class="text">*Ships in 7-21 business days</div>
+              </div>
+
+              <div id="product_social">
+                <div id="fb_icon" class="social_icon"></div>
+                <div id="twit_icon" class="social_icon"></div>
+                <div id="pint_icon" class="social_icon"></div>
+              </div>
+
+            </div>
+            <div class="menu_bg_bottom"></div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div id="avatarCont" class="noDisplay">
+        <div id="frameCont">
+          <div class="bg">
+            <div class="photo center"></div>
+          </div>
+        </div>
+        <div class="name">Banks</div>
+      </div>
+
+    </div>
+
+    <div id="introCont" class="rct">
+      <img src="" id="score_screen" class="noVis">
+      <img src="" id="score_screen_mob" class="noVis">
+      <div id="startCont" class="rct">
+        <div id="start_bg" class="startSize"></div>
+        <div id="startResized">
+          <div id="start_copyright" class="startSize"></div>
+          <div id="start_logo_icon" class="startSize"></div>
+          <div id="start_logo_subtext" class="startSize"></div>
+          <div id="start_logo_text" class="startSize"></div>
+          <div id="start_press_blue" class="startSize"></div>
+          <div id="start_press_gold" class="startSize opacity0"></div>
+        </div>
+      </div>
+      <div id="scoreCont" class="rct noEvents">
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="js/ui.js"></script>
+  <script src="js/resizer.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/assets.js"></script>
+
+  <script>
+    var app, drag, scoreboard;
+    var mixer, animation, resizer, ui;
+    var skipIntro = false;
+
+    window.onload = function(){
+      app = new App();
+      drag = new Drag();
+      scoreboard = new ScoreBoard();
+      resizer = new Resizer();
+      ui = new UI();
+
+      loadAssets();
+      prepareSounds();
+    }
+
+    function init(){
+      ui.init();
+
+      if(skipIntro){
+        TweenMax.set("#globalWrapper", {opacity: 1});
+        initContent();
+        o.introCont.style.display = "none";
+        app.render();
+      } else {
+        TweenMax.to("#globalWrapper", 1, {opacity: 1, onComplete: function(){
+          initContent();
+        }});
+      }
+
+    }
+
+    function initContent(){
+      app.init();
+      drag.init();
+    }
+
+    function enterClicked(){
+      playSound("music", "play");
+      scoreboard.init()
+      resizer.resizeCanvas();
+      scoreboard.show();
+    }
+
+    function scoreScreen(){
+      console.log("scoreScreen");
+      o.startCont.style.display = "none";
+      app.render();
+      setTimeout(showApp, 1000);
+    }
+
+    function showApp(){
+      scoreboard.hide();
+      setTimeout(playTV, 3000);
+    }
+
+    function playTV(){
+      console.log("playTV")
+      el = getEl("id", "tvVideoSource");
+      el.play(); 
+      TweenMax.to(el, 1, {opacity: 1})
+    }
+
+
+  </script>
+
+</body>
+</html>

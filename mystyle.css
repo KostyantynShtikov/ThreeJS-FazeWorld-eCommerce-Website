@@ -1,0 +1,822 @@
+body {
+        margin:0;
+        padding:0;
+        background-color: black;
+}
+
+@font-face {
+    font-family: 'ArcadeClassic';
+    src: url('fonts/ArcadeClassic.eot');
+    src: url('fonts/ArcadeClassic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ArcadeClassic.ttf') format('truetype'),
+        url('fonts/ArcadeClassic.woff2') format('woff2'),
+        url('fonts/ArcadeClassic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Power Pixel-7';
+    src: url('fonts/PowerPixel-7.eot');
+    src: url('fonts/PowerPixel-7.eot?#iefix') format('embedded-opentype'),
+         url('fonts/PowerPixel-7.ttf') format('truetype'),
+        url('fonts/PowerPixel-7.woff2') format('woff2'),
+        url('fonts/PowerPixel-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#globalWrapper{
+  overflow: hidden;
+}
+
+#wrapper {
+  overflow: hidden;
+}
+
+#bgImg {
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+#threeCont {
+  position: absolute;
+}
+
+#threeCont > canvas {
+  position: relative;
+  left: 46%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+#mainCont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#tvCont {
+  position: absolute;
+}
+
+#tvOver {
+  background-image: url("images/tv_over.png");
+}
+
+#tvVideo {
+  position: absolute;
+  margin-left: 1px;
+  margin-top: 1px;
+  width: 122px;
+  height: 115px;
+  overflow: hidden;
+}
+
+.tvSize {
+  width: 124px;
+  height: 117px;
+  position: absolute;
+}
+
+/*
+#start_bg {
+  background-size: 100% 100%;
+}*/
+/*
+#twitch-container {
+  position: absolute;
+  top: 239px;
+  left: 40px;
+  width: 207px;
+  height: 185px;
+  overflow: hidden;
+}
+
+#twitch-embed {
+  /*width: 500px;*/
+  /*height: 300px;*/
+  /*position: absolute;*/
+  /*background-color: rgba(0, 0, 0, 0.1);*/
+/*}
+
+iframe{
+  position: absolute;
+}*/
+
+#introCont {
+  z-index: 4000;
+}
+
+#avatarCont {
+  position: absolute;
+  left: 2vh;
+  bottom: 2vh;
+  z-index: 3000;
+}
+
+#avatarCont > .name {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 62px;
+  color: white;
+  text-shadow: 7px 7px black;
+  font-family: "Power Pixel-7";
+}
+
+#frameCont {
+  position: relative;
+  width: 236px;
+  height: 236px;
+}
+
+#frameCont > .bg > .photo {
+  position: absolute;
+  width: 190px;
+  height: 189px;
+  background-image: url("images/avatar_banks.png");
+}
+
+#frameCont > .bg {
+  position: absolute;
+  width: 236px;
+  height: 236px;
+  background-image: url("images/avatar_bg.png");
+}
+
+#shopCont {
+  position: absolute;
+  left: 2vh;
+  top: 2vh;
+  z-index: 3000;
+}
+
+#cartCont {
+  position: absolute;
+  right: 2vh;
+  top: 2vh;
+  z-index: 3000;
+  width: 492px;
+}
+
+#cartBtn {
+  position: relative;
+  width: 92px;
+  height: 89px;
+  cursor: pointer;
+  float: right;
+  cursor: pointer;
+}
+
+#cartBtn > .icon {
+  position: absolute;
+  width: 92px;
+  height: 89px;
+  background-image: url("images/cart_icon.png");
+}
+
+#cartBtn > .circle {
+  position: absolute;
+  width: 28px;
+  height: 27px;
+  top:-10%;
+  left:80%;
+  background-image: url("images/cart_icon_circle.png");
+}
+
+#cartBtn > .circle > .text {
+  position: relative;
+  color: white;
+  font-family: "ArcadeClassic";
+  margin-left: 8px;
+  font-size: 24px;
+}
+
+
+#cartBox {
+  position: relative;
+  float: right;
+  margin-top: 8px;
+}
+
+/* PRODUCT BOX */
+
+#productBox {
+  position: relative;
+  float: right;
+  margin-top: 8px;
+}
+
+#productBox > .box {
+  position: relative;
+}
+
+#productBox > .box > .top {
+  width: 492px;
+  height: 6px;
+  background-image: url("images/cart_box_bg_top.png");
+}
+
+#productBox > .box > .bottom {
+  width: 492px;
+  height: 11px;
+  background-image: url("images/cart_box_bg_bottom.png");
+}
+
+#productBox > .box > .middle {
+  width: 492px;
+  /*height: 11px;*/
+  padding-top: 32px;
+  background-image: url("images/cart_box_bg_middle.png");
+}
+
+#productBox > .box > .menu_bg_middle {
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#productBottom {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#addToCartBtn {
+  position: relative;
+  width: 309px;
+  height: 41px;
+  background-image: url("images/product_add_button.png");
+  cursor: pointer;
+  color: white;
+  font-family: "ArcadeClassic";
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  text-shadow: 2px 2px #530a0a;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#product_photo_big {
+  width: 401px;
+  height: 410px;
+  background-image: url("images/product_box.png");
+  position: relative;
+
+}
+
+#product_photo_big > .big_photo {
+  background-image: url(images/products/p_shirt_01.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 80%;
+}
+
+#product_slider {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  margin-top: 12px;
+}
+
+#product_slider > .left {
+  display: inline-block;
+  width: 23px;
+  height: 92px;
+  background-image: url("images/product_slide_left.png");
+}
+
+#product_slider > .middle {
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+  height: 92px;
+  background-image: url("images/product_slide_middle.png");
+}
+
+#product_slider > .middle > .small_photo {
+  position: relative;
+      float: left;
+  min-width: 80px;
+  background-image: url("images/products/p_shirt_01.png");
+  top: 9px;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+
+#product_slider > .right {
+  display: inline-block;
+  width: 23px;
+  height: 92px;
+  background-image: url("images/product_slide_right.png");
+}
+
+#product_description {
+  display: inline-block;
+  width: 402px;
+  height: 120px;
+  background-image: url("images/product_article_window.png");
+  margin-top: 20px;
+
+  text-align: left;
+  color: white;
+  font-family: "ArcadeClassic";
+  font-size: 28px;
+}
+
+#product_description > div {
+  padding-left: 20px;
+}
+
+#product_description > .name {
+  padding-top: 15px;
+}
+
+#product_size_tags {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.size_tag {
+  display: inline-block;
+  width: 50px;
+  height: 33px;
+  background-image: url("images/product_size_icon.png");
+  color: white;
+  font-family: "ArcadeClassic";
+  font-size: 27px;
+  line-height: 30px;
+  text-shadow: 2px 2px #53360a;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#product_discplaimer > .text{
+  text-align: left;
+  color: white;
+  font-family: "ArcadeClassic";
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 18px;
+}
+
+#product_social {
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 48px;
+}
+
+#fb_icon {
+  background-image: url("images/facebook_icon.png");
+}
+#twit_icon {
+  background-image: url("images/twitter_icon.png");
+}
+#pint_icon {
+  background-image: url("images/pinterest_icon.png");
+}
+
+.social_icon {
+  width: 25px;
+  height: 24px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/*////*/
+
+.product_header {
+  position: relative;
+  /*float: right;*/
+  width: 492px;
+  height: 77px;
+  background-image: url("images/product_label.png");
+}
+
+.product_header > .name {
+  position: absolute;
+  color: white;
+  font-family: "ArcadeClassic";
+  font-size: 52px;
+  margin-left: 32px;
+  line-height: 84px;
+}
+
+#cartBox > .box {
+  position: relative;
+}
+
+#cartBox > .box > .top {
+  width: 492px;
+  height: 6px;
+  background-image: url("images/cart_box_bg_top.png");
+}
+
+#cartBox > .box > .bottom {
+  width: 492px;
+  height: 11px;
+  background-image: url("images/cart_box_bg_bottom.png");
+}
+
+#cartBox > .box > .middle {
+  width: 492px;
+  /*height: 11px;*/
+  padding-top: 32px;
+  background-image: url("images/cart_box_bg_middle.png");
+}
+
+.closeBtn {
+  position: absolute;
+  background-image: url("images/close_icon.png");
+  width: 47px;
+  height: 44px;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+#cartProceedBtn {
+  position: relative;
+  width: 329px;
+  height: 61px;
+  background-image: url("images/checkout_button.png");
+  cursor: pointer;
+  color: white;
+  font-family: "ArcadeClassic";
+  font-size: 32px;
+  line-height: 58px;
+  text-align: center;
+  text-shadow: 2px 2px #530a0a;
+  margin-top: 0px;
+}
+
+#subtotal {
+  font-family: "ArcadeClassic";
+  font-size: 34px;
+  color: black;
+  margin-left: 32px;
+  line-height: 80px;
+}
+
+.dolar_sign {
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+#cartProducts {
+  margin-left: 32px;
+  padding-bottom: 24px;
+  max-height: 400px;
+  overflow-y: auto;
+  width: 88%;
+}
+
+#cartBottom {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+.cart_product {
+  font-family: "ArcadeClassic";
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.cart_product:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+}
+
+.cart_product > .infoBox {
+  position: relative;
+  float: left;
+}
+
+.cart_product > .infoBox > .name {
+  font-size: 18px;
+}
+.cart_product > .infoBox > .color {
+  font-size: 18px;
+}
+.cart_product > .infoBox > .price {
+  font-size: 32px;
+}
+
+.cart_product > .infoBox > .tags {
+  color: white;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.cart_product > .infoBox > .tags > .tag {
+  display:inline-block;
+  width: 30px;
+  height: 29px;
+  text-align: center;
+  background-image: url("images/cart_info_box.png");
+  margin-right: 8px;
+}
+
+.cart_product > .photoFrame {
+  width: 109px;
+  height: 115px;
+  background-image: url("images/cart_selection_window.png");
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 6px;
+  /*margin-bottom: 16px;*/
+}
+
+.cart_product > .photoFrame > .photo {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-image: url("images/products/p_shirt_01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cart_product > .deleteBtn {
+  position: absolute;
+  right: 6px;
+  top: 1px;
+  width: 40px;
+  height: 40px;
+  background-image: url("images/delete_cart_product_btn.png");
+  display: none;
+  opacity: 0.25;
+}
+
+.cart_product > .deleteBtn:hover {
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+.cart_product:hover > .deleteBtn { 
+  display: block;
+}
+
+
+/*SHOP*/
+
+#shopBtn {
+  position: relative;
+  width: 273px;
+  height: 89px;
+  background-image: url("images/shop_btn_bg.png");
+  cursor: pointer;
+}
+
+#shopBtn > .text {
+  position: absolute;
+  margin-left: 32px;
+  margin-top: 0px;
+  color: white;
+  line-height: 89px;
+  font-size: 72px;
+  text-shadow: 2px 2px #0c434d;
+  font-family: "ArcadeClassic";
+}
+
+#shopBtn > .arrow {
+  position: absolute;
+  width: 38px;
+  height: 22px;
+  right: 28px;
+  top: 33px;
+  background-image: url("images/shop_btn_arrow.png");
+}
+
+#menuCont {
+  position: relative;
+}
+
+/*#menuCont > .middle > .marg {
+  margin-left: 64px;
+  height: 30px;
+}*/
+
+#menuList > .list {
+  margin-left: 64px;
+  line-height: 90px;
+  font-size: 36px;
+  font-family: "ArcadeClassic";
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#menuList > .list:hover {
+  color: white;
+}
+
+#menuList > .list:first-child { 
+  padding-top: 30px;
+}
+
+#menuList > .list:last-child { 
+  padding-bottom: 30px;
+}
+
+.menu_bg_top {
+  width: 491px;
+  height: 11px;
+  background-image: url("images/shop_menu_top.png");
+}
+
+.menu_bg_middle {
+  width: 491px;
+  background-image: url("images/shop_menu_vertical.png");
+}
+
+.menu_bg_bottom {
+  width: 491px;
+  height: 11px;
+  background-image: url("images/shop_menu_bottom.png");
+}
+
+#productList {
+  padding-left: 32px;
+  padding-bottom: 21px;
+  padding-right: 40px;
+}
+
+#productListCont {
+  overflow-y: auto;
+  width: 103%;
+  max-height: 700px;
+}
+
+
+
+/* Scroll bar customized */
+
+::-webkit-scrollbar {
+    width: 29px;
+    background-color: rgba(0, 0, 0, 0 > .image);
+}
+ 
+::-webkit-scrollbar-track {
+  background-color:red;
+  background-image: url("images/scrollbar_main_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+::-webkit-scrollbar-button {
+    width: 29px;
+    height: 29px;
+} 
+
+::-webkit-scrollbar-button:start {
+  background-image: url("images/scrollbar_btn.png");
+} 
+
+::-webkit-scrollbar-button:end {
+  background-image: url("images/scrollbar_btn_end.png");
+} 
+
+
+/*::-webkit-scrollbar-button:start:decrement,*/
+/*::-webkit-scrollbar-button:end:increment {*/
+ 
+::-webkit-scrollbar-thumb {
+  /*background-color:blue;*/
+  background-image: url("images/scrollbar_main.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}/*
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: url('http://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-10/images/header-demos.jpg');
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}*/
+
+canvas { 
+}
+
+#dragEl{ 
+}
+
+.product {
+  display: none;
+  width: 183px;
+  height: 194px;
+  /*background-color: rgba(0, 0, 0, 0.1);*/
+
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+}
+
+.product:hover {
+  background-image: url("images/product_select_box_hover.png");
+  cursor: pointer;
+}
+
+#back_btn {
+  color: black;
+  font-size: 32px;
+  font-family: "ArcadeClassic";
+  line-height: 65px;
+  cursor: pointer;
+}
+/*
+#product_end_space {
+  height: 21px;
+}*/
+
+#back_btn:hover {
+  color: white;
+}
+
+
+#p_jerseys_01 > .img { background-image: url("images/products/p_jerseys_01.png"); }
+
+#p_shirt_01 > .img { background-image: url("images/products/p_shirt_01.png"); }
+#p_shirt_02 > .img { background-image: url("images/products/p_shirt_02.png"); }
+#p_shirt_03 > .img { background-image: url("images/products/p_shirt_03.png"); }
+#p_shirt_04 > .img { background-image: url("images/products/p_shirt_04.png"); }
+
+#p_hoodies_01 > .img { background-image: url("images/products/p_hoodies_01.png"); }
+#p_hoodies_02 > .img { background-image: url("images/products/p_hoodies_02.png"); }
+#p_hoodies_03 > .img { background-image: url("images/products/p_hoodies_03.png"); }
+
+#p_champion_01 > .img { background-image: url("images/products/p_champion_01.png"); }
+#p_champion_02 > .img { background-image: url("images/products/p_champion_02.png"); }
+
+#p_digital_01 > .img { background-image: url("images/products/p_digital_01.png"); }
+
+.img {
+  width: 183px;
+  height: 194px;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+
+.rct {
+  position: absolute;
+  width: 100%; 
+  height: 100% 
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center_hor {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.opacity0 { opacity: 0; }
+.opacity1 { opacity: 1; }
+
+.abs {
+  position: absolute;
+}
+.hidden{
+	visibility: hidden;
+}
+.noEvents{
+  pointer-events: none;
+}
+.noVis{
+    visibility: hidden;
+}
+.noDisplay{
+    display: none;
+}
+
